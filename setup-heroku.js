@@ -7,9 +7,6 @@ const rl = readline.createInterface({
 });
 
 rl.question("Enter the name of the Heroku app to create: ", answer => {
-  // TODO: Log the answer in a database
-  // console.log(`Thank you for your valuable feedback: ${answer}`);
-
   execSync(`heroku create ${answer}`);
   execSync(
     "heroku buildpacks:set https://github.com/timanovsky/subdir-heroku-buildpack"
