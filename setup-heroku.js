@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 });
 
 rl.question("Enter the name of the Heroku app to create: ", answer => {
-  execSync(`heroku create ${answer}`);
+  execSync(`heroku create ${answer} --region eu`);
   execSync(
     "heroku buildpacks:set https://github.com/timanovsky/subdir-heroku-buildpack"
   );
