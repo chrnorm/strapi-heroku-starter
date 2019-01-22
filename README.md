@@ -12,6 +12,7 @@ Running on your local development environment:
 - Run the command `docker-compose up`
 - docker-compose automatically creates a database and installs Strapi
 - Open localhost:1337 in your browser
+- When you are finished developing, stop the local server with `docker-compose down`.
 
 ## Deploying to Heroku
 Make sure that you've set up the local dev environment by following the instructions above and you've configured the content types in Strapi before deploying.
