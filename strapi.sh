@@ -20,10 +20,6 @@ DATABASE_NAME=${DATABASE_NAME:-strapi}
 if [ ! -f "$APP_NAME/package.json" ]
 then
     strapi new ${APP_NAME} --dbclient=$DATABASE_CLIENT --dbhost=$DATABASE_HOST --dbport=$DATABASE_PORT --dbname=$DATABASE_NAME --dbusername=$DATABASE_USERNAME --dbpassword=$DATABASE_PASSWORD --dbssl=$DATABASE_SSL --dbauth=$DATABASE_AUTHENTICATION_DATABASE
-
-    # insert any additional plugins or setup steps here
-    strapi install graphql
-
 elif [ ! -d "$APP_NAME/node_modules" ]
 then
     npm install --prefix ./$APP_NAME
