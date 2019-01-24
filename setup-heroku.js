@@ -37,6 +37,8 @@ rl.question("Enter the name of the Heroku app to create: ", answer => {
   execSync(`heroku config:set DATABASE_NAME=${match[5]}`);
 
   console.log(`Heroku app "${answer}" is set up! ✅`);
+  console.log(`⚠️ IMPORTANT ⚠️ Your app is not deployed yet!`);
+  console.log(`To deploy your app, run "git push heroku"`);
 
   rl.close();
 });
